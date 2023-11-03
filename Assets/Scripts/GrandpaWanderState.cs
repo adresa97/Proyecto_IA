@@ -31,7 +31,7 @@ public class GrandpaWanderState : IGrandpaState
         }
         else if (path.status == NavMeshPathStatus.PathInvalid)
         {
-            TurnArround();
+            RotateToValidDirection();
         }
     }
 
@@ -78,6 +78,22 @@ public class GrandpaWanderState : IGrandpaState
         target += transform.position;
 
         Seek(target);
+    }
+
+    void RotateToValidDirection()
+    {
+        NavMeshHit hit;
+
+        if (NavMesh.SamplePosition(transform.position, out hit, 5, NavMesh.GetAreaFromName("Walkable")))
+        {
+            Vector3 target = hit.position;
+
+            Seek(target);
+        }
+        else
+        {
+            Wander();
+        }
     }
 
     Vector3 GetVisibleDirection()
