@@ -9,12 +9,12 @@ public class GrandpaVisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Human" && other.gameObject != grandpa.gameObject)
+        if (other.CompareTag("Human") && other.gameObject != grandpa.gameObject)
         {
             grandpa.TriggerIn("Human");
         }
 
-        if (other.tag == "Seat")
+        if (other.CompareTag("Seat"))
         {
             if (!other.GetComponent<Seat>().IsOccupied() && other.gameObject != grandpa.seat)
             {
@@ -31,7 +31,7 @@ public class GrandpaVisionManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Human" && other.gameObject != grandpa.gameObject)
+        if (other.CompareTag("Human") && other.gameObject != grandpa.gameObject)
         {
             grandpa.TriggerOut("Human");
         }

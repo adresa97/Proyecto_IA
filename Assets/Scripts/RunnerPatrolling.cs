@@ -1,6 +1,7 @@
 using PathCreation;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
@@ -30,6 +31,20 @@ public class RunnerPatrolling : MonoBehaviour
 
         path = new NavMeshPath();
 
+        GoToPath();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            Patrol();
+        }
+    }
+
+    void GoToPath()
+    {
         if (bezier != null)
         {
             distance = bezier.path.GetClosestDistanceAlongPath(transform.position);
@@ -39,23 +54,19 @@ public class RunnerPatrolling : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!agent.pathPending && agent.remainingDistance < 1)
-        {
-            Patrol();
-        }
-    }
-
-    void Patrol()
+    public void Patrol()
     {
         if (bezier != null)
         {
-            distance += direction * speed * Time.deltaTime;
+            distance += direction * 3;
             target = bezier.path.GetPointAtDistance(distance);
             agent.CalculatePath(target, path);
             agent.destination = target;
         }
-    } 
+    }
+
+    public void SetClosestDistance()
+    {
+        distance = bezier.path.GetClosestDistanceAlongPath(transform.position);
+    }
 }
