@@ -10,7 +10,7 @@ public class RunnerVisionManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Human") && other.gameObject != runner.gameObject)
+        if ((other.CompareTag("Human") && other.gameObject != runner.gameObject) || other.CompareTag("Insect"))
         {
             runner.SetClosestDistance();
             runner.Patrol();

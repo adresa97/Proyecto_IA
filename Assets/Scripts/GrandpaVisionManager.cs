@@ -9,7 +9,7 @@ public class GrandpaVisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Human") && other.gameObject != grandpa.gameObject)
+        if ((other.CompareTag("Human") && other.gameObject != grandpa.gameObject) || other.CompareTag("Insect"))
         {
             grandpa.TriggerIn("Human");
         }
@@ -31,7 +31,7 @@ public class GrandpaVisionManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Human") && other.gameObject != grandpa.gameObject)
+        if ((other.CompareTag("Human") && other.gameObject != grandpa.gameObject) || other.CompareTag("Insect"))
         {
             grandpa.TriggerOut("Human");
         }
