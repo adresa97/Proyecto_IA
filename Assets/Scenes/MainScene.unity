@@ -4252,11 +4252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 247266698, guid: d9a2cffd794105f40afc42008aa8dfa8, type: 3}
       propertyPath: boidCount
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 247266698, guid: d9a2cffd794105f40afc42008aa8dfa8, type: 3}
       propertyPath: alignWeight
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 247266698, guid: d9a2cffd794105f40afc42008aa8dfa8, type: 3}
       propertyPath: fieldOfView
@@ -4276,7 +4276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 247266698, guid: d9a2cffd794105f40afc42008aa8dfa8, type: 3}
       propertyPath: flockLimits.x
-      value: 5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 247266698, guid: d9a2cffd794105f40afc42008aa8dfa8, type: 3}
       propertyPath: flockLimits.y
