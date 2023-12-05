@@ -17,6 +17,10 @@ namespace BBUnity.Actions
         [Help("Boolean value that defines if this owner is pursuing its dog or not")]
         public bool isPursuing { get; set; }
 
+        [OutParam("newState")]
+        [Help("State set this loop")]
+        public int newState { get; set; }
+
         [OutParam("position")]
         [Help("This gameObject target position")]
         public Vector3 position { get; set; }
@@ -30,6 +34,7 @@ namespace BBUnity.Actions
         {
             if (!isPursuing) return TaskStatus.FAILED;
 
+            newState = 1;
             return TaskStatus.COMPLETED;
         }
     }

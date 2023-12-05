@@ -15,20 +15,25 @@ MonoBehaviour:
   brickName: Assets/Behaviours/Dog/DogBehaviour.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"c72e1ec7f00a0014e89d00371cf59b2d\" nextId=\"18\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"c72e1ec7f00a0014e89d00371cf59b2d\" nextId=\"20\">\r\n      <root>\r\n       
     <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\"
     isBlackboard=\"False\" />\r\n          <entry name=\"owner\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"False\" />\r\n          <entry name=\"stealDistance\" type=\"System.Single\"
-    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"ownerRadius\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"ownerRadius\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"biteDistance\"
     type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
-    name=\"isStealing\" type=\"System.Boolean\" isBlackboard=\"False\" />\r\n       
-    </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
-    <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"True\"
-    />\r\n          <entry name=\"isStealing\" type=\"System.Boolean\" isBlackboard=\"True\"
-    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams>\r\n       
-    <localValues>\r\n          <entry name=\"targetPosition\" type=\"UnityEngine.Vector3\"
-    isBlackboard=\"False\" value=\"0 0 0\" />\r\n        </localValues>\r\n     
+    name=\"bitableDistance\" type=\"System.Single\" isBlackboard=\"False\" value=\"0\"
+    />\r\n          <entry name=\"isBiting\" type=\"System.Boolean\" isBlackboard=\"False\"
+    />\r\n          <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"False\"
+    />\r\n          <entry name=\"currentState\" type=\"System.Int32\" isBlackboard=\"False\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
+    <outputValues>\r\n          <entry name=\"isBiting\" type=\"System.Boolean\"
+    isBlackboard=\"True\" />\r\n          <entry name=\"newState\" type=\"System.Int32\"
+    isBlackboard=\"True\" />\r\n          <entry name=\"currentState\" type=\"System.Int32\"
+    isBlackboard=\"True\" />\r\n          <entry name=\"owner\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams>\r\n        <localValues>\r\n          <entry name=\"targetPosition\"
+    type=\"UnityEngine.Vector3\" isBlackboard=\"False\" />\r\n        </localValues>\r\n     
     </localParams>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\" loops=\"-1\"
     policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n        <SequenceNode
     id=\"11\" />\r\n      </child>\r\n      <inputParams />\r\n      <outputParams
@@ -38,62 +43,72 @@ MonoBehaviour:
     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
     />\r\n    </SequenceNode>\r\n    <SelectorNode id=\"12\">\r\n      <children>\r\n       
     <elem>\r\n          <ActionNode id=\"14\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <ActionNode id=\"15\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
-    id=\"16\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"17\"
+    <ActionNode id=\"18\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"19\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"17\"
     />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
     <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <ActionNode
     id=\"13\" action=\"PEC2/Navigation/NavigateToTarget\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"position\" type=\"UnityEngine.Vector3\"
     isBlackboard=\"True\" blackboard=\"targetPosition\" />\r\n          <entry name=\"agent\"
     type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"True\" blackboard=\"agent\"
-    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
-    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"14\" action=\"PEC2/Dog/Vector3/GetPositionFleeing\">\r\n     
+    />\r\n          <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"True\"
+    blackboard=\"newState\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"currentState\"
+    type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"currentState\" />\r\n       
+    </outputValues>\r\n      </outputParams>\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"14\" action=\"PEC2/Dog/Vector3/GetPositionFleeing\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"owner\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"owner\" />\r\n          <entry name=\"isStealing\"
-    type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isStealing\" />\r\n       
+    type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isBiting\" />\r\n         
+    <entry name=\"isBiting\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isBiting\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
+    <outputValues>\r\n          <entry name=\"position\" type=\"UnityEngine.Vector3\"
+    isBlackboard=\"True\" blackboard=\"targetPosition\" />\r\n          <entry name=\"newState\"
+    type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"newState\" />\r\n       
+    </outputValues>\r\n      </outputParams>\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"18\" action=\"PEC2/Dog/SetBool/BiteHuman\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"owner\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"owner\" />\r\n          <entry name=\"biteDistance\"
+    type=\"System.Single\" isBlackboard=\"True\" blackboard=\"biteDistance\" />\r\n       
     </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
-    <entry name=\"position\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"targetPosition\"
-    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
-    />\r\n    </ActionNode>\r\n    <ActionNode id=\"15\" action=\"PEC2/Dog/SetBool/StealHuman\">\r\n     
+    <entry name=\"isStealing\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isBiting\"
+    />\r\n          <entry name=\"isBiting\" type=\"System.Boolean\" isBlackboard=\"True\"
+    blackboard=\"isBiting\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"19\" action=\"PEC2/Dog/Vector3/GetPositionToBite\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"owner\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"owner\" />\r\n          <entry name=\"stealDistance\"
-    type=\"System.Single\" isBlackboard=\"True\" blackboard=\"stealDistance\" />\r\n       
+    isBlackboard=\"True\" blackboard=\"owner\" />\r\n          <entry name=\"bitableDistance\"
+    type=\"System.Single\" isBlackboard=\"True\" blackboard=\"bitableDistance\" />\r\n       
     </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
-    <entry name=\"isStealing\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isStealing\"
-    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
-    />\r\n    </ActionNode>\r\n    <ActionNode id=\"16\" action=\"PEC2/Dog/Vector3/GetPositionToSteal\">\r\n     
-    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"owner\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"owner\" />\r\n          <entry name=\"stealDistance\"
-    type=\"System.Single\" isBlackboard=\"True\" blackboard=\"stealDistance\" />\r\n       
-    </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
-    <entry name=\"position\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"targetPosition\"
-    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
-    />\r\n    </ActionNode>\r\n    <ActionNode id=\"17\" action=\"PEC2/Dog/Vector3/GetPositionAroundTarget\">\r\n     
+    <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"newState\"
+    />\r\n          <entry name=\"position\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\"
+    blackboard=\"targetPosition\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"17\" action=\"PEC2/Dog/Vector3/GetPositionAroundTarget\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"owner\" />\r\n          <entry name=\"radius\"
     type=\"System.Single\" isBlackboard=\"True\" blackboard=\"ownerRadius\" />\r\n         
     <entry name=\"owner\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"owner\"
     />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
     <outputValues>\r\n          <entry name=\"position\" type=\"UnityEngine.Vector3\"
-    isBlackboard=\"True\" blackboard=\"targetPosition\" />\r\n        </outputValues>\r\n     
-    </outputParams>\r\n      <localParams />\r\n    </ActionNode>\r\n  </runtimeInfo>\r\n 
-    <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"DogBehaviour\" _description=\"\"
-    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n         
-    <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <SequenceNode id=\"11\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <SelectorNode id=\"12\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <ActionNode id=\"13\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
-    id=\"14\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"15\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"16\" />\r\n       
-    </elem>\r\n        <elem>\r\n          <ActionNode id=\"17\" />\r\n        </elem>\r\n     
-    </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n          <RepeatDecorator
-    id=\"1\" />\r\n          <SelectorNode id=\"12\" />\r\n          <SequenceNode
-    id=\"11\" />\r\n          <ActionNode id=\"13\" />\r\n          <ActionNode id=\"14\"
-    />\r\n          <ActionNode id=\"15\" />\r\n          <ActionNode id=\"16\" />\r\n         
-    <ActionNode id=\"17\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
-    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"744.1425 146.5358\" name=\"Repeat\" description=\"Repeats
-    the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    isBlackboard=\"True\" blackboard=\"targetPosition\" />\r\n          <entry name=\"newState\"
+    type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"newState\" />\r\n       
+    </outputValues>\r\n      </outputParams>\r\n      <localParams />\r\n    </ActionNode>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"DogBehaviour\"
+    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
+    <elem>\r\n          <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <SequenceNode id=\"11\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <SelectorNode id=\"12\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"13\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"14\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"17\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"18\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"19\" />\r\n       
+    </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <RepeatDecorator id=\"1\" />\r\n          <SelectorNode id=\"12\" />\r\n         
+    <SequenceNode id=\"11\" />\r\n          <ActionNode id=\"13\" />\r\n         
+    <ActionNode id=\"14\" />\r\n          <ActionNode id=\"19\" />\r\n          <ActionNode
+    id=\"17\" />\r\n          <ActionNode id=\"18\" />\r\n        </nodes>\r\n     
+    </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"744.1425 146.5358\" name=\"Repeat\"
+    description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode id=\"11\">\r\n     
     <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"734.9998
@@ -107,31 +122,31 @@ MonoBehaviour:
     <BehaviorTree id=\"0\" />\r\n          <SelectorNode id=\"12\" />\r\n         
     <SequenceNode id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
     <ActionNode id=\"13\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"825.0002 408.3333\" name=\"PEC2/Navigation/NavigateToTarget\" description=\"Set
+    position=\"827.0002 408.3333\" name=\"PEC2/Navigation/NavigateToTarget\" description=\"Set
     targetPosition as this gameObject NavAgent destination\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"13\" />\r\n         
     <SequenceNode id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"14\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"343.3333 669.9997\" name=\"PEC2/Dog/Vector3/GetPositionFleeing\" description=\"Set
+    position=\"345.3333 669.9997\" name=\"PEC2/Dog/Vector3/GetPositionFleeing\" description=\"Set
     a near position away from owner\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"14\" />\r\n         
     <SelectorNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"15\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"506.6664 771.6665\" name=\"PEC2/Dog/SetBool/StealHuman\" description=\"Steal
-    from human\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <ActionNode id=\"15\" />\r\n          <SelectorNode
-    id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"673.3331 770.0001\" name=\"PEC2/Dog/Vector3/GetPositionToSteal\" description=\"If
-    a stealable human is detected, set its position as target\" cardinality=\"0\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
-    id=\"16\" />\r\n          <SelectorNode id=\"12\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"17\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"793.3335 670\" name=\"PEC2/Dog/Vector3/GetPositionAroundTarget\"
-    description=\"Gets a random position near a target game object\" cardinality=\"0\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
-    id=\"17\" />\r\n          <SelectorNode id=\"12\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+    <ActionNode id=\"18\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"512 770\" name=\"PEC2/Dog/SetBool/BiteHuman\" description=\"Bite a
+    human\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\"
+    />\r\n          <ActionNode id=\"18\" />\r\n          <SelectorNode id=\"12\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"19\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"678 774\" name=\"PEC2/Dog/Vector3/GetPositionToBite\" description=\"If
+    a bitable human is detected, set its position as target\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"19\" />\r\n         
+    <SelectorNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"17\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"793.3335 672\" name=\"PEC2/Dog/Vector3/GetPositionAroundTarget\" description=\"Gets
+    a random position near a target game object\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"17\" />\r\n         
+    <SelectorNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 
+    </editorInfo>\r\n</BehaviorBricks>"
   zoom: 0.5
   subslist: []
   _guid: c72e1ec7f00a0014e89d00371cf59b2d

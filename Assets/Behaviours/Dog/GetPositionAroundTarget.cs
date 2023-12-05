@@ -17,6 +17,10 @@ namespace BBUnity.Actions
         [Help("Radius around target")]
         public float radius { get; set; }
 
+        [OutParam("newState")]
+        [Help("State set this loop")]
+        public int newState { get; set; }
+
         [OutParam("position")]
         [Help("Random position set inside a circle of radius value around target")]
         public Vector3 position { get; set; }
@@ -40,6 +44,7 @@ namespace BBUnity.Actions
 
         public override TaskStatus OnUpdate()
         {
+            newState = 0;
             return TaskStatus.COMPLETED;
         }
     }

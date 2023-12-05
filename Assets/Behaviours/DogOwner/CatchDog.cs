@@ -23,7 +23,7 @@ namespace BBUnity.Actions
         {
             isCatchable = false;
 
-            if (isPursuing && Vector3.Distance(dog.transform.position, gameObject.transform.position) <= 2f)
+            if (isPursuing && Vector3.Distance(dog.transform.position, gameObject.transform.position) <= 1f)
             {
                 isCatchable = true;
                 isPursuing = false;

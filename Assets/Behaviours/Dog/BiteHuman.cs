@@ -4,35 +4,35 @@ using UnityEngine;
 
 namespace BBUnity.Actions
 {
-    [Action("PEC2/Dog/SetBool/StealHuman")]
-    [Help("Steal from human")]
+    [Action("PEC2/Dog/SetBool/BiteHuman")]
+    [Help("Bite a human")]
 
-    public class StealHuman : GOAction
+    public class BiteHuman : GOAction
     {
         [InParam("owner")]
-        [Help("This object owner or human who cannot be stolen by this object")]
+        [Help("This object owner or human who cannot be bitten by this object")]
         public GameObject owner { get; set; }
 
-        [InParam("stealDistance")]
-        [Help("Distance this object can steal from")]
-        public float stealDistance { get; set; }
+        [InParam("biteDistance")]
+        [Help("Distance this object can bite from")]
+        public float biteDistance { get; set; }
 
-        [OutParam("isStealing")]
+        [OutParam("isBiting")]
         [Help("Boolean that defines if this gameObject is stealing or not")]
-        public bool isStealing { get; set; }
+        public bool isBiting { get; set; }
 
         private bool hasChangedStatus;
 
         public override void OnStart()
         {
-            Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, stealDistance);
+            Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, biteDistance);
             int index = 0;
             hasChangedStatus = false;
-            while (!isStealing && index < humans.Length)
+            while (!isBiting && index < humans.Length)
             {
                 if (humans[index].CompareTag("Human") && (humans[index].gameObject != owner))
                 {
-                    isStealing = true;
+                    isBiting = true;
                     hasChangedStatus = true;
                     owner.GetComponent<BehaviorExecutor>().SetBehaviorParam("isPursuing", true);
                     Debug.Log("Le he robado la chuleta al pavo este" + humans[index].name);
@@ -44,7 +44,7 @@ namespace BBUnity.Actions
 
         public override TaskStatus OnUpdate()
         {
-            if (hasChangedStatus && isStealing) return TaskStatus.COMPLETED;
+            if (hasChangedStatus && isBiting) return TaskStatus.COMPLETED;
 
             return TaskStatus.FAILED;
         }

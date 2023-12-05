@@ -4515,12 +4515,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParams.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParams.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParams.Array.data[2]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: blackboard.objectParams.Array.data[1]
       value: 
       objectReference: {fileID: 799846815}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.data[0]
+      value: moveDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.data[1]
+      value: currentState
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.data[2]
+      value: newState
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
 --- !u!1001 &2819229499514692929
@@ -4967,7 +4999,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: m_AutoBraking
@@ -4978,17 +5010,77 @@ PrefabInstance:
       value: Dog
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
-      propertyPath: blackboard.floatParams.Array.data[0]
+      propertyPath: blackboard.intParams.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.boolParams.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.intParams.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.intParams.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParams.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.floatParams.Array.data[1]
-      value: 4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParams.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.boolParamsNames.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.objectParams.Array.data[1]
       value: 
       objectReference: {fileID: 1383326489496633238}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParamsNames.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.data[0]
+      value: newState
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.intParamsNames.Array.data[1]
+      value: currentState
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.boolParamsNames.Array.data[0]
+      value: isBiting
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParamsNames.Array.data[0]
+      value: ownerRadius
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParamsNames.Array.data[1]
+      value: biteDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.floatParamsNames.Array.data[2]
+      value: bitableDistance
+      objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077089, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: m_RootOrder
       value: 22

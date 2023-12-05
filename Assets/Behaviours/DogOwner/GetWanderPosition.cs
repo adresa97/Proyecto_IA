@@ -22,13 +22,17 @@ namespace BBUnity.Actions
         [Help("This gameObject NavAgent")]
         public NavMeshAgent agent { get; set;  }
 
+        [OutParam("newState")]
+        [Help("State set this loop")]
+        public int newState { get; set; }
+
         [OutParam("position")]
         [Help("Target position to wander")]
         public Vector3 position { get; set; }
 
         public override void OnStart()
         {
-            float randomAngle = Random.Range(-visionRange, visionRange);
+            float randomAngle = Random.Range(-visionRange, visionRange) * Mathf.PI / 180;
             Vector3 target = gameObject.transform.position + new Vector3(Mathf.Cos(randomAngle), 0, Mathf.Sin(randomAngle)).normalized * distance;
 
             position = target;
@@ -36,6 +40,7 @@ namespace BBUnity.Actions
 
         public override TaskStatus OnUpdate()
         {
+            newState = 0;
             return TaskStatus.COMPLETED;
         }
     }
