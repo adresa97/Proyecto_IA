@@ -38,7 +38,6 @@ namespace BBUnity.Actions
                 {
                     position = humans[index].transform.position;
                     canSteal = true;
-                    Debug.Log("He encontrado carne fresca" + humans[index].name);
                 }
                 index++;
             }

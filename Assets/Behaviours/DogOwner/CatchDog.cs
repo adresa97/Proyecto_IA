@@ -13,9 +13,9 @@ namespace BBUnity.Actions
         [Help("This owner's dog")]
         public GameObject dog { get; set; }
 
-        [OutParam("isPursuing")]
-        [Help("Value that defines wether this owner is pursuing its dog or not")]
-        public bool isPursuing { get; set; }
+        [InParam("ownerBool")]
+        [Help("Component that stores boolean values")]
+        public OwnerActions ownerBool { get; set; }
 
         private bool isCatchable;
 
@@ -23,11 +23,11 @@ namespace BBUnity.Actions
         {
             isCatchable = false;
 
-            if (isPursuing && Vector3.Distance(dog.transform.position, gameObject.transform.position) <= 1f)
+            if (ownerBool.IsPursuing() && Vector3.Distance(dog.transform.position, gameObject.transform.position) <= 2f)
             {
                 isCatchable = true;
-                isPursuing = false;
-                dog.GetComponent<BehaviorExecutor>().SetBehaviorParam("isStealing", false);
+                gameObject.SendMessage("SetPursuing", false);
+                gameObject.SendMessage("CatchDog");
             }
         }
 

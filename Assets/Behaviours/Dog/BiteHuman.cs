@@ -17,9 +17,9 @@ namespace BBUnity.Actions
         [Help("Distance this object can bite from")]
         public float biteDistance { get; set; }
 
-        [OutParam("isBiting")]
-        [Help("Boolean that defines if this gameObject is stealing or not")]
-        public bool isBiting { get; set; }
+        [InParam("dogBool")]
+        [Help("Component that stores boolean values")]
+        public DogActions dogBool { get; set; }
 
         private bool hasChangedStatus;
 
@@ -28,15 +28,13 @@ namespace BBUnity.Actions
             Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, biteDistance);
             int index = 0;
             hasChangedStatus = false;
-            while (!isBiting && index < humans.Length)
+            while (!dogBool.IsBiting() && index < humans.Length)
             {
                 if (humans[index].CompareTag("Human") && (humans[index].gameObject != owner))
                 {
-                    isBiting = true;
+                    gameObject.SendMessage("SetBiting", true);
                     hasChangedStatus = true;
-                    owner.GetComponent<BehaviorExecutor>().SetBehaviorParam("isPursuing", true);
-                    Debug.Log("Le he robado la chuleta al pavo este" + humans[index].name);
-
+                    gameObject.SendMessage("AlarmOwner");
                 }
                 index++;
             }
@@ -44,7 +42,7 @@ namespace BBUnity.Actions
 
         public override TaskStatus OnUpdate()
         {
-            if (hasChangedStatus && isBiting) return TaskStatus.COMPLETED;
+            if (hasChangedStatus && dogBool.IsBiting()) return TaskStatus.COMPLETED;
 
             return TaskStatus.FAILED;
         }

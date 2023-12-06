@@ -4502,8 +4502,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3850492387646358105, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3850492387646358105, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: m_AutoBraking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3850492387646358105, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: m_WalkableMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3850492387646358105, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: m_StoppingDistance
@@ -4522,6 +4530,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.boolParams.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: blackboard.intParams.Array.data[0]
       value: 2
       objectReference: {fileID: 0}
@@ -4534,13 +4546,33 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.objectParams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.floatParams.Array.data[0]
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: blackboard.intParamsNames.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.boolParamsNames.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: blackboard.objectParams.Array.data[1]
       value: 
       objectReference: {fileID: 799846815}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.objectParams.Array.data[2]
+      value: 
+      objectReference: {fileID: 2764403619008904654}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.objectParams.Array.data[3]
+      value: 
+      objectReference: {fileID: 1603609314}
     - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
       propertyPath: blackboard.intParamsNames.Array.data[0]
       value: moveDistance
@@ -4553,8 +4585,35 @@ PrefabInstance:
       propertyPath: blackboard.intParamsNames.Array.data[2]
       value: newState
       objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.objectParamsNames.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.objectParamsNames.Array.data[2]
+      value: ownerActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915098116547664584, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: blackboard.objectParamsNames.Array.data[3]
+      value: floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071209536159553861, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+      propertyPath: dog
+      value: 
+      objectReference: {fileID: 7886823537466969089}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+--- !u!114 &2764403619008904654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7071209536159553861, guid: 28e3eb31fec145a48a65b0e2030b9188, type: 3}
+  m_PrefabInstance: {fileID: 2764403619008904653}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383326489496633238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600a953e07cb2ee468f00995d737f20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2819229499514692929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4998,6 +5057,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: m_Speed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: m_Radius
       value: 0.4
       objectReference: {fileID: 0}
@@ -5005,6 +5068,22 @@ PrefabInstance:
       propertyPath: m_AutoBraking
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: m_Acceleration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 262008137587424326, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: m_WalkableMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445838534937710889, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 2764403619008904654}
     - target: {fileID: 7886823537842077087, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: m_Name
       value: Dog
@@ -5015,7 +5094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.boolParams.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.floatParams.Array.size
@@ -5028,6 +5107,10 @@ PrefabInstance:
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.intParams.Array.data[1]
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.objectParams.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.floatParams.Array.data[0]
@@ -5047,12 +5130,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.boolParamsNames.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.objectParams.Array.data[1]
       value: 
       objectReference: {fileID: 1383326489496633238}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.objectParams.Array.data[2]
+      value: 
+      objectReference: {fileID: 7886823537466969089}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.floatParamsNames.Array.size
       value: 3
@@ -5064,6 +5151,10 @@ PrefabInstance:
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.intParamsNames.Array.data[1]
       value: currentState
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.objectParamsNames.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.boolParamsNames.Array.data[0]
@@ -5080,6 +5171,10 @@ PrefabInstance:
     - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: blackboard.floatParamsNames.Array.data[2]
       value: bitableDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886823537842077088, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+      propertyPath: blackboard.objectParamsNames.Array.data[2]
+      value: dogActions
       objectReference: {fileID: 0}
     - target: {fileID: 7886823537842077089, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
       propertyPath: m_RootOrder
@@ -5127,3 +5222,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+--- !u!114 &7886823537466969089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7445838534937710889, guid: 9aed814f4a1580c4a921453173064df7, type: 3}
+  m_PrefabInstance: {fileID: 7886823537466969088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799846815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de412b0767a66534b8e5de503c883b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

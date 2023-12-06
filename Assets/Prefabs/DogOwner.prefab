@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3850492387646358104}
   - component: {fileID: 3850492387646358105}
   - component: {fileID: 3915098116547664584}
+  - component: {fileID: 7071209536159553861}
   m_Layer: 0
   m_Name: DogOwner
   m_TagString: Human
@@ -157,9 +158,11 @@ MonoBehaviour:
   paused: 0
   restartWhenFinished: 0
   blackboard:
-    intParams: 02000000
+    intParams: 000000000000000000000000
     intParamsNames:
-    - distance
+    - moveDistance
+    - currentState
+    - newState
     intParamsLostDefaultValue: 
     boolParams: 00
     boolParamsNames:
@@ -212,6 +215,19 @@ MonoBehaviour:
     quaternionParams: []
     quaternionParamsNames: []
     quaternionParamsLostDefaultValue: 
+--- !u!114 &7071209536159553861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3850492387646358107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600a953e07cb2ee468f00995d737f20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dog: {fileID: 0}
 --- !u!1 &3850492388137194133
 GameObject:
   m_ObjectHideFlags: 0

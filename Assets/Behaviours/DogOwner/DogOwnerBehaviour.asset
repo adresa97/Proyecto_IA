@@ -17,18 +17,17 @@ MonoBehaviour:
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
     id=\"0\" guid=\"03b63833c46ca004c8744a3cf485de00\" nextId=\"8\">\r\n      <root>\r\n       
     <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
-    <inputValues>\r\n          <entry name=\"isPursuing\" type=\"System.Boolean\"
-    isBlackboard=\"False\" value=\"False\" />\r\n          <entry name=\"moveDistance\"
-    type=\"System.Int32\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
-    name=\"visionRange\" type=\"System.Single\" isBlackboard=\"False\" value=\"0\"
-    />\r\n          <entry name=\"dog\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\"
-    />\r\n          <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"False\"
+    <inputValues>\r\n          <entry name=\"moveDistance\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"visionRange\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
+    name=\"dog\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\" />\r\n         
+    <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"False\"
     />\r\n          <entry name=\"currentState\" type=\"System.Int32\" isBlackboard=\"False\"
     />\r\n          <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"False\"
+    />\r\n          <entry name=\"ownerActions\" type=\"OwnerActions\" isBlackboard=\"False\"
     />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
     <outputValues>\r\n          <entry name=\"currentState\" type=\"System.Int32\"
     isBlackboard=\"True\" />\r\n          <entry name=\"newState\" type=\"System.Int32\"
-    isBlackboard=\"True\" />\r\n          <entry name=\"isPursuing\" type=\"System.Boolean\"
     isBlackboard=\"True\" />\r\n          <entry name=\"dog\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
     <localParams>\r\n        <localValues>\r\n          <entry name=\"targetPosition\"
@@ -50,22 +49,27 @@ MonoBehaviour:
     isBlackboard=\"True\" blackboard=\"targetPosition\" />\r\n          <entry name=\"agent\"
     type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"True\" blackboard=\"agent\"
     />\r\n          <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"True\"
-    blackboard=\"newState\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
-    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"currentState\"
-    type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"currentState\" />\r\n       
-    </outputValues>\r\n      </outputParams>\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"5\" action=\"PEC2/Owner/SetBool/CatchDog\">\r\n      <inputParams>\r\n       
-    <inputValues>\r\n          <entry name=\"dog\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"dog\" />\r\n        </inputValues>\r\n     
+    blackboard=\"newState\" />\r\n          <entry name=\"isAlwaysRecalculating\"
+    type=\"System.Boolean\" isBlackboard=\"False\" value=\"True\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"currentState\" type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"currentState\"
+    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"5\" action=\"PEC2/Owner/SetBool/CatchDog\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"dog\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"dog\" />\r\n          <entry name=\"ownerBool\"
+    type=\"OwnerActions\" isBlackboard=\"True\" blackboard=\"ownerActions\" />\r\n       
+    </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
     <entry name=\"isPursuing\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isPursuing\"
     />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
     />\r\n    </ActionNode>\r\n    <ActionNode id=\"6\" action=\"PEC2/Owner/Vector3/GetDogPosition\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"dog\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"dog\" />\r\n          <entry name=\"isPursuing\"
-    type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isPursuing\" />\r\n       
-    </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
-    <entry name=\"position\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"targetPosition\"
+    type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"isPursuing\" />\r\n         
+    <entry name=\"ownerBool\" type=\"OwnerActions\" isBlackboard=\"True\" blackboard=\"ownerActions\"
+    />\r\n          <entry name=\"currentState\" type=\"System.Int32\" isBlackboard=\"True\"
+    blackboard=\"currentState\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"position\"
+    type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"targetPosition\"
     />\r\n          <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"True\"
     blackboard=\"newState\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
     <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"7\" action=\"PEC2/Owner/Vector3/GetWanderPosition\">\r\n     
@@ -73,9 +77,10 @@ MonoBehaviour:
     type=\"System.Single\" isBlackboard=\"True\" blackboard=\"visionRange\" />\r\n         
     <entry name=\"distance\" type=\"System.Int32\" isBlackboard=\"True\" blackboard=\"moveDistance\"
     />\r\n          <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"True\"
-    blackboard=\"agent\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
-    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"position\"
-    type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"targetPosition\"
+    blackboard=\"agent\" />\r\n          <entry name=\"floor\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"floor\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"position\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\" blackboard=\"targetPosition\"
     />\r\n          <entry name=\"newState\" type=\"System.Int32\" isBlackboard=\"True\"
     blackboard=\"newState\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
     <localParams />\r\n    </ActionNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n   
@@ -121,7 +126,7 @@ MonoBehaviour:
     this owner's dog position\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"6\" />\r\n          <SelectorNode
     id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    <ActionNode id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
     position=\"614.5764 831.6946\" name=\"PEC2/Owner/Vector3/GetWanderPosition\"
     description=\"Get a random position near this gameObject inside a vision range\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         

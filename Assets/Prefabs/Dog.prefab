@@ -206,6 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7886823537842077089}
   - component: {fileID: 7886823537842077088}
+  - component: {fileID: 7445838534937710889}
   - component: {fileID: 559287662695104933}
   - component: {fileID: 262008137587424326}
   m_Layer: 0
@@ -248,19 +249,23 @@ MonoBehaviour:
   paused: 0
   restartWhenFinished: 0
   blackboard:
-    intParams: 
-    intParamsNames: []
+    intParams: 0000000000000000
+    intParamsNames:
+    - newState
+    - currentState
     intParamsLostDefaultValue: 
     boolParams: 00
     boolParamsNames:
-    - isStealing
+    - isBiting
     boolParamsLostDefaultValue: 
     floatParams:
-    - 1.5
     - 3
+    - 0
+    - 0
     floatParamsNames:
-    - stealDistance
     - ownerRadius
+    - biteDistance
+    - bitableDistance
     floatParamsLostDefaultValue: 
     stringParams: []
     stringParamsNames: []
@@ -304,6 +309,19 @@ MonoBehaviour:
     quaternionParams: []
     quaternionParamsNames: []
     quaternionParamsLostDefaultValue: 
+--- !u!114 &7445838534937710889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886823537842077087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de412b0767a66534b8e5de503c883b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
 --- !u!54 &559287662695104933
 Rigidbody:
   m_ObjectHideFlags: 0

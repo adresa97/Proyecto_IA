@@ -38,8 +38,6 @@ namespace BBUnity.Actions
             random += owner.transform.position;
 
             position = random;
-
-            Debug.Log("Me muevo alrededor de papi");
         }
 
         public override TaskStatus OnUpdate()

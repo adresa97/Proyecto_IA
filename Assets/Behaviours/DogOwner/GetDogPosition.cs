@@ -13,9 +13,9 @@ namespace BBUnity.Actions
         [Help("This owner's dog")]
         public GameObject dog { get; set; }
 
-        [InParam("isPursuing")]
-        [Help("Boolean value that defines if this owner is pursuing its dog or not")]
-        public bool isPursuing { get; set; }
+        [InParam("ownerBool")]
+        [Help("Component that stores boolean values")]
+        public OwnerActions ownerBool { get; set; }
 
         [OutParam("newState")]
         [Help("State set this loop")]
@@ -27,12 +27,12 @@ namespace BBUnity.Actions
 
         public override void OnStart()
         {
-            if (isPursuing) position = dog.transform.position;
+            if (ownerBool.IsPursuing()) position = dog.transform.position;
         }
 
         public override TaskStatus OnUpdate()
         {
-            if (!isPursuing) return TaskStatus.FAILED;
+            if (!ownerBool.IsPursuing()) return TaskStatus.FAILED;
 
             newState = 1;
             return TaskStatus.COMPLETED;

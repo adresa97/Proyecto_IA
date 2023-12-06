@@ -13,9 +13,9 @@ namespace BBUnity.Actions
         [Help("This object owner or human who cannot be bitten by this object")]
         public GameObject owner { get; set; }
 
-        [InParam("isBiting")]
-        [Help("Boolean that defines if this gameObject is biting or not")]
-        public bool isBiting { get; set; }
+        [InParam("dogBool")]
+        [Help("Component that stores boolean values")]
+        public DogActions dogBool { get; set; }
 
         [OutParam("newState")]
         [Help("State set this loop")]
@@ -27,16 +27,15 @@ namespace BBUnity.Actions
 
         public override void OnStart()
         {
-            if (isBiting)
+            if (dogBool.IsBiting())
             {
                 position = -(owner.transform.position - gameObject.transform.position).normalized * 10f;
-                Debug.Log("Me escapo de papi");
             }
         }
 
         public override TaskStatus OnUpdate()
         {
-            if (!isBiting) return TaskStatus.FAILED;
+            if (!dogBool.IsBiting()) return TaskStatus.FAILED;
 
             newState = 2;
             return TaskStatus.COMPLETED;

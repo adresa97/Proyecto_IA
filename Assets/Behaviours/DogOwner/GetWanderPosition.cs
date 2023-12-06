@@ -1,5 +1,6 @@
 using Pada1.BBCore;
 using Pada1.BBCore.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,7 +21,7 @@ namespace BBUnity.Actions
 
         [InParam("agent")]
         [Help("This gameObject NavAgent")]
-        public NavMeshAgent agent { get; set;  }
+        public NavMeshAgent agent { get; set; }
 
         [OutParam("newState")]
         [Help("State set this loop")]
@@ -30,18 +31,29 @@ namespace BBUnity.Actions
         [Help("Target position to wander")]
         public Vector3 position { get; set; }
 
+        private NavMeshPath path;
+
         public override void OnStart()
         {
-            float randomAngle = Random.Range(-visionRange, visionRange) * Mathf.PI / 180;
-            Vector3 target = gameObject.transform.position + new Vector3(Mathf.Cos(randomAngle), 0, Mathf.Sin(randomAngle)).normalized * distance;
+            path = new NavMeshPath();
 
-            position = target;
+            SetRandomDestination();
         }
 
         public override TaskStatus OnUpdate()
         {
             newState = 0;
             return TaskStatus.COMPLETED;
+        }
+
+        private void SetRandomDestination()
+        {
+            float randomAngle = Random.Range(-visionRange, visionRange);
+            Vector3 direction = Quaternion.AngleAxis(randomAngle, Vector3.up) * gameObject.transform.forward * distance;
+
+            Vector3 target = gameObject.transform.position + direction;
+
+            position = target;
         }
     }
 }

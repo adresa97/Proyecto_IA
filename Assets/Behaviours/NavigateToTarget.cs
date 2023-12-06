@@ -62,7 +62,7 @@ namespace BBUnity.Actions
                 currentState = newState;
             }
 
-            return TaskStatus.RUNNING;
+            return TaskStatus.COMPLETED;
         }
 
         private void SetDestination()
