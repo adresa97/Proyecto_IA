@@ -1,6 +1,7 @@
 using Pada1.BBCore.Tasks;
 using Pada1.BBCore;
 using UnityEngine;
+using System.Linq;
 
 namespace BBUnity.Actions
 {
@@ -29,17 +30,12 @@ namespace BBUnity.Actions
 
         public override void OnStart()
         {
-            Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, bitableDistance);
-            int index = 0;
+            Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, bitableDistance).Where((col) => col.CompareTag("Human") && col.gameObject != owner).ToArray();
             canSteal = false;
-            while (!canSteal && index < humans.Length)
+            if (humans.Length > 0)
             {
-                if (humans[index].CompareTag("Human") && (humans[index].gameObject != owner))
-                {
-                    position = humans[index].transform.position;
-                    canSteal = true;
-                }
-                index++;
+                position = humans[0].transform.position;
+                canSteal = true;
             }
         }
 

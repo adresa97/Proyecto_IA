@@ -1,6 +1,7 @@
 using Pada1.BBCore.Tasks;
 using Pada1.BBCore;
 using UnityEngine;
+using System.Linq;
 
 namespace BBUnity.Actions
 {
@@ -25,18 +26,13 @@ namespace BBUnity.Actions
 
         public override void OnStart()
         {
-            Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, biteDistance);
-            int index = 0;
+            Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, biteDistance).Where((col) => col.CompareTag("Human") && col.gameObject != owner).ToArray();
             hasChangedStatus = false;
-            while (!dogBool.IsBiting() && index < humans.Length)
+            if (!dogBool.IsBiting() && humans.Length > 0)
             {
-                if (humans[index].CompareTag("Human") && (humans[index].gameObject != owner))
-                {
-                    gameObject.SendMessage("SetBiting", true);
-                    hasChangedStatus = true;
-                    gameObject.SendMessage("AlarmOwner");
-                }
-                index++;
+                gameObject.SendMessage("SetBiting", true);
+                hasChangedStatus = true;
+                gameObject.SendMessage("AlarmOwner");
             }
         }
 
