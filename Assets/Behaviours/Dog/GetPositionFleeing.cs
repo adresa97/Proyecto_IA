@@ -29,7 +29,7 @@ namespace BBUnity.Actions
         {
             if (dogBool.IsBiting())
             {
-                position = -(owner.transform.position - gameObject.transform.position).normalized * 10f;
+                position = gameObject.transform.position - (owner.transform.position - gameObject.transform.position).normalized * 3f;
             }
         }
 

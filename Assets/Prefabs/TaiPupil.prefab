@@ -409,9 +409,10 @@ GameObject:
   - component: {fileID: 3197658665485694746}
   - component: {fileID: 6841687935900223986}
   - component: {fileID: 6941075285015434914}
+  - component: {fileID: 5010023139993375911}
   m_Layer: 0
   m_Name: TaiPupil
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,9 +497,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74982ab45e44494c94bb6e9c0f3e014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 6841687935900223986}
   teacher: {fileID: 0}
   slot: {fileID: 0}
+  teacherAnimator: {fileID: 0}
+  pupilAnimator: {fileID: 5010023139993375911}
+  animationDelay: 0
+--- !u!114 &5010023139993375911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858838409889289784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7636d7688c465349b650dc2e2f8bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taiAnimator: {fileID: 6076708989848615953}
 --- !u!1 &6946242470884428469
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +642,7 @@ GameObject:
   - component: {fileID: 7355400874742879724}
   - component: {fileID: 7355400874742879725}
   - component: {fileID: 7355400874742879726}
+  - component: {fileID: 6076708989848615953}
   m_Layer: 0
   m_Name: Body
   m_TagString: Human
@@ -702,6 +720,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &6076708989848615953
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355400874742879715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70877444bb4a75a4db1dcf7280c692ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8915920056432698938
 GameObject:
   m_ObjectHideFlags: 0

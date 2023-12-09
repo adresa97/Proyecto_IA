@@ -387,6 +387,37 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
   m_PrefabInstance: {fileID: 2001892346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &174179089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174179090}
+  m_Layer: 0
+  m_Name: TaiChi_Class_Origin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &174179090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174179089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19, y: 0, z: -7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195305708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -855,6 +886,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5236eff99dc02ff49bb2c9f985d2c7b9, type: 3}
+--- !u!1 &624172869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624172870}
+  m_Layer: 0
+  m_Name: TaiChi_Class_Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &624172870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624172869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19, y: 0, z: 7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &649272796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2427,6 +2489,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_Speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6858838409889289784, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_Name
       value: TaiPupil (1)
@@ -2443,9 +2513,17 @@ PrefabInstance:
       propertyPath: teacher
       value: 
       objectReference: {fileID: 3147898082940989553}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: animationDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: teacherAnimator
+      value: 
+      objectReference: {fileID: 3147898082940989554}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2537,7 +2615,7 @@ Transform:
   - {fileID: 947287409}
   - {fileID: 1161447888}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1487462157
 PrefabInstance:
@@ -2732,6 +2810,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_Speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6858838409889289784, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_Name
       value: TaiPupil (3)
@@ -2748,9 +2834,17 @@ PrefabInstance:
       propertyPath: teacher
       value: 
       objectReference: {fileID: 3147898082940989553}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: animationDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: teacherAnimator
+      value: 
+      objectReference: {fileID: 3147898082940989554}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4072,6 +4166,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_Speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6858838409889289784, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_Name
       value: TaiPupil (2)
@@ -4088,9 +4190,17 @@ PrefabInstance:
       propertyPath: teacher
       value: 
       objectReference: {fileID: 3147898082940989553}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: animationDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: teacherAnimator
+      value: 
+      objectReference: {fileID: 3147898082940989554}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5123,10 +5233,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3892391069592703798, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: m_Speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892391069592703798, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892391069592703798, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4024387184316435708, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
       propertyPath: m_Name
       value: TaiCher
       objectReference: {fileID: 0}
+    - target: {fileID: 6546527787416749961, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: stoppingTime
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546527787416749961, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: animationLoop
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546527787416749961, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: firstPosition
+      value: 
+      objectReference: {fileID: 174179090}
+    - target: {fileID: 6546527787416749961, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+      propertyPath: secondPosition
+      value: 
+      objectReference: {fileID: 624172870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
 --- !u!1 &3147898082940989553 stripped
@@ -5134,6 +5272,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4024387184316435708, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
   m_PrefabInstance: {fileID: 3147898082940989552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3147898082940989554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3712731680874509244, guid: c666a2c2afdcfc94282354fa837438df, type: 3}
+  m_PrefabInstance: {fileID: 3147898082940989552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147898082940989553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7636d7688c465349b650dc2e2f8bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3165403627989378204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5141,6 +5290,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_Speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841687935900223986, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6858838409889289784, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_Name
       value: TaiPupil
@@ -5157,9 +5314,17 @@ PrefabInstance:
       propertyPath: teacher
       value: 
       objectReference: {fileID: 3147898082940989553}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: animationDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941075285015434914, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
+      propertyPath: teacherAnimator
+      value: 
+      objectReference: {fileID: 3147898082940989554}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8895726399214305929, guid: 1750bc8f7a49f6c4f87692138eadac04, type: 3}
       propertyPath: m_LocalPosition.x

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1073442190458670888}
   - component: {fileID: 1073442190458670889}
   - component: {fileID: 1073442190458670890}
+  - component: {fileID: 8271801529646464855}
   m_Layer: 0
   m_Name: Body
   m_TagString: Human
@@ -120,6 +121,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &8271801529646464855
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073442190458670887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70877444bb4a75a4db1dcf7280c692ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1073442190915952617
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2446833725746485583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: -0}
   m_LocalScale: {x: 0.25, y: 0.3, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -445,9 +466,11 @@ GameObject:
   - component: {fileID: 5578800168792102016}
   - component: {fileID: 4942241538956078558}
   - component: {fileID: 3892391069592703798}
+  - component: {fileID: 3712731680874509244}
+  - component: {fileID: 6546527787416749961}
   m_Layer: 0
   m_Name: TaiCher
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -520,6 +543,36 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3712731680874509244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4024387184316435708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7636d7688c465349b650dc2e2f8bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taiAnimator: {fileID: 8271801529646464855}
+--- !u!114 &6546527787416749961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4024387184316435708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0ec3c2a0a8d6246b6fda27855ddf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 3892391069592703798}
+  firstPosition: {fileID: 0}
+  secondPosition: {fileID: 0}
+  animator: {fileID: 3712731680874509244}
+  animationLoop: 20
 --- !u!1 &6187139407662346359
 GameObject:
   m_ObjectHideFlags: 0
