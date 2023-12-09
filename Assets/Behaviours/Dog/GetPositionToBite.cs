@@ -26,22 +26,22 @@ namespace BBUnity.Actions
         [Help("Human position to steal")]
         public Vector3 position { get; set; }
 
-        private bool canSteal;
+        private bool canBite;
 
         public override void OnStart()
         {
             Collider[] humans = Physics.OverlapSphere(gameObject.transform.position, bitableDistance).Where((col) => col.CompareTag("Human") && col.gameObject != owner).ToArray();
-            canSteal = false;
+            canBite = false;
             if (humans.Length > 0)
             {
                 position = humans[0].transform.position;
-                canSteal = true;
+                canBite = true;
             }
         }
 
         public override TaskStatus OnUpdate()
         {
-            if (!canSteal) return TaskStatus.FAILED;
+            if (!canBite) return TaskStatus.FAILED;
 
             newState = 1;
             return TaskStatus.COMPLETED;

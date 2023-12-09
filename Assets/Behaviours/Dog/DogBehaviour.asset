@@ -110,46 +110,46 @@ MonoBehaviour:
     <ActionNode id=\"14\" />\r\n          <ActionNode id=\"19\" />\r\n          <ActionNode
     id=\"17\" />\r\n          <ActionNode id=\"18\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"744.1425 146.5358\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"930.3646 232.4801\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode id=\"11\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"734.9998
-    276.6668\" name=\"Sequence\" description=\"Executes all its children in sequence
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"921.2219
+    362.6111\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"11\" />\r\n         
     <RepeatDecorator id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <SelectorNode id=\"12\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"608.3334 511.6664\" name=\"Selector\" description=\"Executes all its
+    position=\"794.5555 597.6108\" name=\"Selector\" description=\"Executes all its
     children until one of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SelectorNode id=\"12\" />\r\n         
     <SequenceNode id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
     <ActionNode id=\"13\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"827.0002 408.3333\" name=\"PEC2/Navigation/NavigateToTarget\" description=\"Set
+    position=\"1013.222 494.2778\" name=\"PEC2/Navigation/NavigateToTarget\" description=\"Set
     targetPosition as this gameObject NavAgent destination\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"13\" />\r\n         
     <SequenceNode id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"14\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"345.3333 669.9997\" name=\"PEC2/Dog/Vector3/GetPositionFleeing\" description=\"Set
+    position=\"531.5554 755.9442\" name=\"PEC2/Dog/Vector3/GetPositionFleeing\" description=\"Set
     a near position away from owner\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"14\" />\r\n         
     <SelectorNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"18\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"512 770\" name=\"PEC2/Dog/SetBool/BiteHuman\" description=\"Bite a
-    human\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\"
+    position=\"698.2221 855.9446\" name=\"PEC2/Dog/SetBool/BiteHuman\" description=\"Bite
+    a human\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\"
     />\r\n          <ActionNode id=\"18\" />\r\n          <SelectorNode id=\"12\"
     />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
     id=\"19\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"678 774\" name=\"PEC2/Dog/Vector3/GetPositionToBite\" description=\"If
+    position=\"864.2221 859.9446\" name=\"PEC2/Dog/Vector3/GetPositionToBite\" description=\"If
     a bitable human is detected, set its position as target\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"19\" />\r\n         
     <SelectorNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"17\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"793.3335 672\" name=\"PEC2/Dog/Vector3/GetPositionAroundTarget\" description=\"Gets
-    a random position near a target game object\" cardinality=\"0\" hasParent=\"True\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"17\" />\r\n         
-    <SelectorNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 
-    </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.5
+    position=\"979.5552 757.9445\" name=\"PEC2/Dog/Vector3/GetPositionAroundTarget\"
+    description=\"Gets a random position near a target game object\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"17\" />\r\n          <SelectorNode id=\"12\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 1
   subslist: []
   _guid: c72e1ec7f00a0014e89d00371cf59b2d

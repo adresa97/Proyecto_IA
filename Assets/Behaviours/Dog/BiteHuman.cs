@@ -38,7 +38,7 @@ namespace BBUnity.Actions
 
         public override TaskStatus OnUpdate()
         {
-            if (hasChangedStatus && dogBool.IsBiting()) return TaskStatus.COMPLETED;
+            if (hasChangedStatus) return TaskStatus.COMPLETED;
 
             return TaskStatus.FAILED;
         }
