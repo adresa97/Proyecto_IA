@@ -8,6 +8,8 @@ TagManager:
   - Seat
   - Insect
   - Floor
+  - Obstacle
+  - Target
   layers:
   - Default
   - TransparentFX

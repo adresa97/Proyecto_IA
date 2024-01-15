@@ -27,6 +27,8 @@ public class SecurityAgent : Agent
     private Quaternion initialRotation;
     private Rigidbody rBody;
 
+    private float floorLeftBorder, floorRightBorder, floorTopBorder, floorBottomBorder;
+
     private bool isAtTarget;
 
     void Start()
@@ -34,6 +36,11 @@ public class SecurityAgent : Agent
         initialPosition = transform.position;
         initialRotation = transform.rotation;
         rBody = GetComponent<Rigidbody>();
+
+        floorLeftBorder = floor.position.x - floor.localScale.x/2;
+        floorRightBorder = floor.position.x + floor.localScale.x/2;
+        floorTopBorder = floor.position.z + floor.localScale.z/2;
+        floorBottomBorder = floor.position.z - floor.localScale.z/2;
 
         isAtTarget = false;
     }
@@ -54,8 +61,8 @@ public class SecurityAgent : Agent
 
         // Relocate target
         Vector3 newPosition = Vector3.zero;
-        newPosition.x = floor.position.x + Random.value * floor.localScale.x - floor.localScale.x/2;
-        newPosition.z = floor.position.z + Random.value * floor.localScale.z - floor.localScale.z/2;
+        newPosition.x = floorLeftBorder + Random.value * floor.localScale.x;
+        newPosition.z = floorBottomBorder + Random.value * floor.localScale.z;
 
         NavMeshHit hit;
         NavMesh.SamplePosition(newPosition, out hit, floor.localScale.x/2, 1);
@@ -68,8 +75,13 @@ public class SecurityAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         // Agent and target positions
-        sensor.AddObservation(target.position);
-        sensor.AddObservation(transform.position);
+        sensor.AddObservation(new Vector2((target.position.x - floorLeftBorder) / (floorRightBorder - floorLeftBorder),
+                                          (target.position.z - floorBottomBorder) / (floorTopBorder - floorBottomBorder)));
+        sensor.AddObservation(new Vector2((transform.position.x - floorLeftBorder) / (floorRightBorder - floorLeftBorder),
+                                          (transform.position.z - floorBottomBorder) / (floorTopBorder - floorBottomBorder)));
+
+        sensor.AddObservation((target.localPosition - transform.localPosition).normalized);
+        sensor.AddObservation(transform.forward);
 
         // Velocities
         sensor.AddObservation(rBody.velocity.x);
@@ -79,21 +91,22 @@ public class SecurityAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         // Actions
-        // 2 continuous actions, 0 -> xForce, 1 -> zForce
-        Vector3 force = Vector3.zero;
-        force.x = actions.ContinuousActions[0];
-        force.z = actions.ContinuousActions[1];
+        // Discrete action 0: rotation: 1 -> static, 2 -> rotate right, 3 -> rotate left
+        int rotateDirection = 0;
+        if (actions.DiscreteActions[0] == 2) rotateDirection = 1;
+        else if (actions.DiscreteActions[0] == 3) rotateDirection = -1;
 
-        rBody.AddForce(force * speed);
-        rBody.velocity = Vector3.ClampMagnitude(rBody.velocity, maxSpeed);
+        Vector3 rotation = transform.rotation.eulerAngles;
+        rotation.y += rotateDirection * angularSpeed * Time.deltaTime;
+        transform.rotation = Quaternion.Euler(rotation);
 
-        // Look to movement direction
-        Vector3 rotation = rBody.velocity;
-        rotation.y = 0;
-        if (rotation != Vector3.zero)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(rotation, Vector3.up), angularSpeed * Time.deltaTime);
-        }
+        // Discrete action 1: movement: 1 -> static, 2 -> move forwward, 3 -> move backward
+        int moveDirection = 0;
+        if (actions.DiscreteActions[1] == 2) moveDirection = 1;
+        else if (actions.DiscreteActions[1] == 3) moveDirection = -1;
+
+        rBody.AddForce(transform.forward * moveDirection * speed);
+        if (rBody.velocity.magnitude > maxSpeed) rBody.velocity = rBody.velocity.normalized * maxSpeed;
 
         // Rewards
         // Reached target
@@ -118,8 +131,16 @@ public class SecurityAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        var continuousActionsOut = actionsOut.ContinuousActions;
-        continuousActionsOut[0] = Input.GetAxis("Horizontal");
-        continuousActionsOut[1] = Input.GetAxis("Vertical");
+        int rotationOutput = 1;
+        if (!Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) rotationOutput = 2;
+        else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)) rotationOutput = 3;
+
+        int movementOutput = 1;
+        if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow)) movementOutput = 2;
+        else if (!Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow)) movementOutput = 3;
+
+        var discreteActionsOut = actionsOut.DiscreteActions;
+        discreteActionsOut[0] = rotationOutput;
+        discreteActionsOut[1] = movementOutput;
     }
 }

@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 262008137587424326}
   m_Layer: 0
   m_Name: Dog
-  m_TagString: Untagged
+  m_TagString: Insect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,9 +254,8 @@ MonoBehaviour:
     - newState
     - currentState
     intParamsLostDefaultValue: 
-    boolParams: 00
-    boolParamsNames:
-    - isBiting
+    boolParams: 
+    boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
     - 3
@@ -276,9 +275,11 @@ MonoBehaviour:
     objectParams:
     - {fileID: 262008137587424326}
     - {fileID: 0}
+    - {fileID: 0}
     objectParamsNames:
     - agent
     - owner
+    - dogActions
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

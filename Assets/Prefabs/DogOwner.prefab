@@ -164,9 +164,8 @@ MonoBehaviour:
     - currentState
     - newState
     intParamsLostDefaultValue: 
-    boolParams: 00
-    boolParamsNames:
-    - isPursuing
+    boolParams: 
+    boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
     - 30
@@ -182,9 +181,11 @@ MonoBehaviour:
     objectParams:
     - {fileID: 3850492387646358105}
     - {fileID: 0}
+    - {fileID: 0}
     objectParamsNames:
     - agent
     - dog
+    - ownerActions
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
