@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6392160253244734904}
   - component: {fileID: 5268421479028023100}
   - component: {fileID: 1875844149847124243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7599530415359582966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm_R_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 7059952367212188728}
   - component: {fileID: 6399323865273400121}
   - component: {fileID: 4658865708352804242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4424527557427589155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_R_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 3015854584706172636}
   - component: {fileID: 3423332804673205611}
   - component: {fileID: 5635267274180159681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 6470312615647089385}
   - component: {fileID: 4878520376076811199}
   - component: {fileID: 6040844912694658495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 6841687935900223986}
   - component: {fileID: 6941075285015434914}
   - component: {fileID: 5010023139993375911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TaiPupil
   m_TagString: Human
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 531595682610872764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm_L_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 7355400874260628780}
   - component: {fileID: 7355400874260628777}
   - component: {fileID: 7355400874260628778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 7355400874742879725}
   - component: {fileID: 7355400874742879726}
   - component: {fileID: 6076708989848615953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Human
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3631723108352802053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_L_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

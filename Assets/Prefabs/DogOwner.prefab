@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3850492387646358105}
   - component: {fileID: 3915098116547664584}
   - component: {fileID: 7071209536159553861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DogOwner
   m_TagString: Human
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 3850492388137194132}
   - component: {fileID: 3850492388137194129}
   - component: {fileID: 3850492388137194130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

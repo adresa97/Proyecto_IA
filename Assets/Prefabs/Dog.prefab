@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6120391100124804473}
   - component: {fileID: 4596381631396270825}
   - component: {fileID: 2071539941380601098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 7886823537573908144}
   - component: {fileID: 7886823537573908143}
   - component: {fileID: 7886823537573908142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ear_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 7445838534937710889}
   - component: {fileID: 559287662695104933}
   - component: {fileID: 262008137587424326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dog
   m_TagString: Insect
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 7886823538473518807}
   - component: {fileID: 7886823538473518806}
   - component: {fileID: 7886823538473518805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ear_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 7886823538627057078}
   - component: {fileID: 7886823538627057077}
   - component: {fileID: 7886823538627057076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7886823538747766952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

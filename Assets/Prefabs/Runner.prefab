@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5349667045000610928}
   - component: {fileID: 5349667045000610929}
   - component: {fileID: 5349667045000610930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Runner
   m_TagString: Human
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 5349667045181134010}
   - component: {fileID: 4460999982953245965}
   - component: {fileID: 8857829687250062315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

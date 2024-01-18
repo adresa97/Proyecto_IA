@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 611129328340904332}
   - component: {fileID: 8808523468625271026}
   - component: {fileID: 496755820555093200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border3
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7818880418463950761}
   - component: {fileID: 8342396872969612100}
   - component: {fileID: 8188445996490012109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7001970317069347236}
   - component: {fileID: 3945791277219515673}
   - component: {fileID: 8278476656049306393}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (6)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 8030900983540070257}
   - component: {fileID: 4470896400905300648}
   - component: {fileID: 5719769890833110219}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 1102179633013459861}
   - component: {fileID: 767026255743990451}
   - component: {fileID: 128860187422708391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 4593662335906156270}
   - component: {fileID: 635817044767883233}
   - component: {fileID: 559751580835478896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (5)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 2773092475019939906}
   - component: {fileID: 1730919302109579108}
   - component: {fileID: 9162278662632890624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 4492564249334906007}
   - component: {fileID: 8170881724927902332}
   - component: {fileID: 4968813304453678098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 4036638266575545938}
   - component: {fileID: 1027211745407607410}
   - component: {fileID: 5376446685453438897}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border4
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 5085515721815518204}
   - component: {fileID: 5335033710021754634}
   - component: {fileID: 4852209631989216494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (7)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 4175928827363051551}
   - component: {fileID: 8835813796803188044}
   - component: {fileID: 2715458196978402125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 9041627997361852924}
   - component: {fileID: 2493619599070922567}
   - component: {fileID: 7548230026209979106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8058496405011522597}
   - component: {fileID: 2720167449167409390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreePlace
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8207068239350663450}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leaves
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1098,7 +1098,7 @@ GameObject:
   - component: {fileID: 6713544408831439991}
   - component: {fileID: 2317146419507998035}
   - component: {fileID: 5481763572973580692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 8119133614900661542}
   - component: {fileID: 7362792233964489878}
   - component: {fileID: 8928009011489646019}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

@@ -37,6 +37,10 @@ public class SecurityAgent : Agent
 
     private bool isAtTarget;
 
+    /* TRAINING ONLY
+    private bool isAtObstacle;
+    */
+
     void Start()
     {
         initialPosition = transform.position;
@@ -50,6 +54,10 @@ public class SecurityAgent : Agent
         if (targetPadding < floor.localScale.z / 2) floorWorkingSizeZ -= 2 * targetPadding;
 
         isAtTarget = false;
+
+        /* TRAINING ONLY
+        isAtObstacle = false;
+        */
     }
 
     public override void OnEpisodeBegin()
@@ -65,6 +73,11 @@ public class SecurityAgent : Agent
 
         // Reset isAtTarget
         isAtTarget = false;
+
+        /* TRAINING ONLY
+        // Reset isAtObstacle
+        isAtObstacle = false;
+        */
 
         // Relocate target
         target.position = RandomPositionOnFloor(floor);
@@ -118,6 +131,15 @@ public class SecurityAgent : Agent
             SetReward(-1.0f);
             EndEpisode();
         }
+
+        /* TRAINING ONLY
+        // Collides with obstacle or human
+        else if (isAtObstacle)
+        {
+            SetReward(-1.0f);
+            EndEpisode();
+        }
+        */
     }
 
     public void OnTriggerStay(Collider other)
@@ -125,6 +147,14 @@ public class SecurityAgent : Agent
         // If activates trigger at target gameObject
         if (other.gameObject == target.gameObject) isAtTarget = true;
     }
+
+    /* TRAINING ONLY
+    public void OnCollisionEnter(Collision collision)
+    {
+        // If collides with obstacle or human
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Human")) isAtObstacle = true;
+    }
+    */
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {

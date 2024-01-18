@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1883399713486309341}
   - component: {fileID: 1774278010914565406}
   - component: {fileID: 6567237569575962872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Security
   m_TagString: Human
   m_Icon: {fileID: 0}
@@ -139,6 +139,7 @@ MonoBehaviour:
   MaxStep: 0
   target: {fileID: 0}
   floor: {fileID: 0}
+  targetPadding: 0
   angularSpeed: 80
   speed: 10
   maxSpeed: 5
@@ -242,7 +243,7 @@ GameObject:
   - component: {fileID: 5349667045181134012}
   - component: {fileID: 5349667045181134009}
   - component: {fileID: 5349667045181134010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

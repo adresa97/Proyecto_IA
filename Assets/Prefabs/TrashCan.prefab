@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5065902062965361964}
   - component: {fileID: 5065902062965361962}
   - component: {fileID: 5065902062965361963}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5065902063776350006}
   - component: {fileID: 5065902063776350004}
   - component: {fileID: 5065902063776350005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5065902063816248727}
   - component: {fileID: 5065902063816248725}
   - component: {fileID: 5065902063816248726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5065902064146980815}
   - component: {fileID: 7425248750092531987}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TrashCan
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 5065902064689846950}
   - component: {fileID: 5065902064689846947}
   - component: {fileID: 5065902064689846948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 5065902064737761909}
   - component: {fileID: 5065902064737761907}
   - component: {fileID: 5065902064737761908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

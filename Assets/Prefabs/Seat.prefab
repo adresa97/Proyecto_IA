@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2992443118333369807}
   - component: {fileID: 4406026999455446192}
   - component: {fileID: 8722602101271492525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Seat
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 5649061845414039403}
   - component: {fileID: 5866872712244269357}
   - component: {fileID: 3944844806252138584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Seat
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
