@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 611129328340904332}
   - component: {fileID: 8808523468625271026}
   - component: {fileID: 496755820555093200}
-  - component: {fileID: 8914161865952788272}
   m_Layer: 0
   m_Name: Border3
   m_TagString: Obstacle
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8914161865952788272
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469911840051895469}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1707979299655124906
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +94,6 @@ GameObject:
   - component: {fileID: 7818880418463950761}
   - component: {fileID: 8342396872969612100}
   - component: {fileID: 8188445996490012109}
-  - component: {fileID: 2444166285091948539}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Obstacle
@@ -181,19 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2444166285091948539
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707979299655124906}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1809710699674226405
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +177,6 @@ GameObject:
   - component: {fileID: 7001970317069347236}
   - component: {fileID: 3945791277219515673}
   - component: {fileID: 8278476656049306393}
-  - component: {fileID: 7595891049487611739}
   m_Layer: 0
   m_Name: Sphere (6)
   m_TagString: Obstacle
@@ -278,19 +249,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7595891049487611739
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809710699674226405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2558153245681290196
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +260,6 @@ GameObject:
   - component: {fileID: 8030900983540070257}
   - component: {fileID: 4470896400905300648}
   - component: {fileID: 5719769890833110219}
-  - component: {fileID: 6663916496527233202}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Obstacle
@@ -376,20 +333,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6663916496527233202
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2558153245681290196}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &3353095905411024354
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +344,6 @@ GameObject:
   - component: {fileID: 1102179633013459861}
   - component: {fileID: 767026255743990451}
   - component: {fileID: 128860187422708391}
-  - component: {fileID: 4841456809624970406}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Obstacle
@@ -474,19 +416,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4841456809624970406
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3353095905411024354}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3525089767961818132
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +427,6 @@ GameObject:
   - component: {fileID: 4593662335906156270}
   - component: {fileID: 635817044767883233}
   - component: {fileID: 559751580835478896}
-  - component: {fileID: 5036587022347917916}
   m_Layer: 0
   m_Name: Sphere (5)
   m_TagString: Obstacle
@@ -571,19 +499,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5036587022347917916
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3525089767961818132}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3606963650403739141
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +510,6 @@ GameObject:
   - component: {fileID: 2773092475019939906}
   - component: {fileID: 1730919302109579108}
   - component: {fileID: 9162278662632890624}
-  - component: {fileID: 7549807078538315538}
   m_Layer: 0
   m_Name: Border1
   m_TagString: Obstacle
@@ -668,19 +582,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7549807078538315538
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606963650403739141}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4279496483408856852
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +593,6 @@ GameObject:
   - component: {fileID: 4492564249334906007}
   - component: {fileID: 8170881724927902332}
   - component: {fileID: 4968813304453678098}
-  - component: {fileID: 607004647583149073}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Obstacle
@@ -765,19 +665,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &607004647583149073
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4279496483408856852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4760372064921554045
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +676,6 @@ GameObject:
   - component: {fileID: 4036638266575545938}
   - component: {fileID: 1027211745407607410}
   - component: {fileID: 5376446685453438897}
-  - component: {fileID: 6745938560353826834}
   m_Layer: 0
   m_Name: Border4
   m_TagString: Obstacle
@@ -862,19 +748,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6745938560353826834
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4760372064921554045}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5168982375391389576
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +759,6 @@ GameObject:
   - component: {fileID: 5085515721815518204}
   - component: {fileID: 5335033710021754634}
   - component: {fileID: 4852209631989216494}
-  - component: {fileID: 5095852377386221966}
   m_Layer: 0
   m_Name: Sphere (7)
   m_TagString: Obstacle
@@ -959,19 +831,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5095852377386221966
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168982375391389576}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5183903580926722760
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +842,6 @@ GameObject:
   - component: {fileID: 4175928827363051551}
   - component: {fileID: 8835813796803188044}
   - component: {fileID: 2715458196978402125}
-  - component: {fileID: 5990312004875971418}
   m_Layer: 0
   m_Name: Border2
   m_TagString: Obstacle
@@ -1056,19 +914,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5990312004875971418
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5183903580926722760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5716206303436655543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +925,6 @@ GameObject:
   - component: {fileID: 9041627997361852924}
   - component: {fileID: 2493619599070922567}
   - component: {fileID: 7548230026209979106}
-  - component: {fileID: 693849880771660678}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Obstacle
@@ -1153,19 +997,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &693849880771660678
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5716206303436655543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7819621957899766401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8058496405011522597}
+  - component: {fileID: 2720167449167409390}
   m_Layer: 0
   m_Name: TreePlace
   m_TagString: Obstacle
@@ -1203,6 +1035,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2720167449167409390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819621957899766401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1, y: 2.1, z: 3.1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7950590211957836257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1098,6 @@ GameObject:
   - component: {fileID: 6713544408831439991}
   - component: {fileID: 2317146419507998035}
   - component: {fileID: 5481763572973580692}
-  - component: {fileID: 7804266739067602607}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Obstacle
@@ -1326,19 +1170,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7804266739067602607
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8266177075413368119}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8826082346570051235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1181,6 @@ GameObject:
   - component: {fileID: 8119133614900661542}
   - component: {fileID: 7362792233964489878}
   - component: {fileID: 8928009011489646019}
-  - component: {fileID: 4058709442890601691}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Obstacle
@@ -1423,16 +1253,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4058709442890601691
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8826082346570051235}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

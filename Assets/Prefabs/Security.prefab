@@ -139,7 +139,7 @@ MonoBehaviour:
   MaxStep: 0
   target: {fileID: 0}
   floor: {fileID: 0}
-  angularSpeed: 60
+  angularSpeed: 80
   speed: 10
   maxSpeed: 5
 --- !u!114 &5022242286506614924
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 12
+    VectorObservationSize: 9
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_SensorName: SecurityVision
   m_DetectableTags:
   - Target
-  m_RaysPerDirection: 3
-  m_MaxRayDegrees: 90
+  m_RaysPerDirection: 2
+  m_MaxRayDegrees: 30
   m_SphereCastRadius: 0.5
   m_RayLength: 5
   m_RayLayerMask:
@@ -213,8 +213,8 @@ MonoBehaviour:
   m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: -0.8
-  m_EndVerticalOffset: -0.8
+  m_StartVerticalOffset: -0.5
+  m_EndVerticalOffset: -0.5
 --- !u!208 &6567237569575962872
 NavMeshObstacle:
   m_ObjectHideFlags: 0
