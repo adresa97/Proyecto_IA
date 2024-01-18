@@ -100,7 +100,7 @@ public class SecurityAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         // Actions
-        // Discrete action 0: rotation: 1 -> static, 2 -> rotate right, 3 -> rotate left
+        // Discrete action 0: rotation: 0 -> static, 1 -> rotate right, 2 -> rotate left
         int rotateDirection = 0;
         if (actions.DiscreteActions[0] == 1) rotateDirection = 1;
         else if (actions.DiscreteActions[0] == 2) rotateDirection = -1;
@@ -109,7 +109,7 @@ public class SecurityAgent : Agent
         rotation.y += rotateDirection * angularSpeed * Time.deltaTime;
         transform.rotation = Quaternion.Euler(rotation);
 
-        // Discrete action 1: movement: 1 -> static, 2 -> move forwward, 3 -> move backward
+        // Discrete action 1: movement: 0 -> static, 1 -> move forwward, 2 -> move backward
         int moveDirection = 0;
         if (actions.DiscreteActions[1] == 1) moveDirection = 1;
         else if (actions.DiscreteActions[1] == 2) moveDirection = -1;
@@ -158,12 +158,12 @@ public class SecurityAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        // Decide rotation state: 1 -> no input, 2 -> right arrow, 3 -> left arrow
+        // Decide rotation state: 0 -> no input, 1 -> right arrow, 2 -> left arrow
         int rotationOutput = 0;
         if (!Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) rotationOutput = 1;
         else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)) rotationOutput = 2;
 
-        // Decide movement state: 1 -> no input, 2 -> up arrow, 3 -> down arrow
+        // Decide movement state: 0 -> no input, 1 -> up arrow, 2 -> down arrow
         int movementOutput = 0;
         if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow)) movementOutput = 1;
         else if (!Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow)) movementOutput = 2;
